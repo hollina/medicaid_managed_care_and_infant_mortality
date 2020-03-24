@@ -1,0 +1,43 @@
+\documentclass[12pt]{article}
+
+%------------------------------------------%
+%                Packages
+%------------------------------------------%
+\include{latex_extras/packages}
+
+%------------------------------------------%
+%              Custom Commands
+%------------------------------------------%
+\include{latex_extras/custom_commands}
+
+%------------------------------------------%
+%      Matter Related to Table Creation
+%------------------------------------------%
+\include{latex_extras/dynamic_tables}
+
+%------------------------------------------%
+%     Begin Document
+%------------------------------------------%
+\doublespacing
+\begin{document}
+
+
+%------------------------------------------%
+% Table 1: Main regression estimates from paper
+%------------------------------------------%
+%offered_full_regression_results.tex
+\newpage
+	\begin{table}[ht]\centering
+			\begin{adjustbox}{width=.75\textwidth}
+			\centering
+			  \begin{threeparttable}
+			    \caption{Main regression results from exhibit 2.}
+			    \estauto{full_regression_results}{13}{S[table-format=1.2,table-column-width=17mm]}
+			    \label{tab:main_regression_results}
+			   % \Figtext{Some basic text about the table.}
+				\small{\Fignote{* p $<$ 0.1, ** p $<$ 0.05, *** p $<$ 0.01. Robust standard errors clustered at the birth county level in parentheses.}}
+			  % \Starnote
+			  \end{threeparttable}
+			 \end{adjustbox}
+		\end{table}
+\end{document}
